@@ -28,11 +28,11 @@ abstract class BindingListAdapter<T : Any, VB : ViewBinding>(
         }
 
         override fun bind(item: T) {
-            bindViews(binding, item, adapterPosition)
+            bindViews(binding, item, bindingAdapterPosition)
         }
     }
 
-    fun getItem(viewHolder: RecyclerView.ViewHolder): T = getItem(viewHolder.adapterPosition)
+    fun getItem(viewHolder: RecyclerView.ViewHolder): T = getItem(viewHolder.bindingAdapterPosition)
 
     abstract fun initListeners(binding: VB, vh: BindingListAdapterViewHolder)
 

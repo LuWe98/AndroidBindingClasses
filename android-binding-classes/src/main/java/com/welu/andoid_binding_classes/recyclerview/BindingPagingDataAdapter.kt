@@ -24,11 +24,11 @@ abstract class BindingPagingDataAdapter<T : Any, VB: ViewBinding>(diffCallback: 
         }
 
         override fun bind(item: T) {
-            bindViews(binding, item, adapterPosition)
+            bindViews(binding, item, bindingAdapterPosition)
         }
     }
 
-    fun getItem(viewHolder: RecyclerView.ViewHolder): T? = getItem(viewHolder.adapterPosition)
+    fun getItem(viewHolder: RecyclerView.ViewHolder): T? = getItem(viewHolder.bindingAdapterPosition)
 
     abstract fun initListeners(binding: VB, vh: BindingPagingDataAdapterViewHolder)
 
