@@ -48,7 +48,7 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.lucaweinmann'
-                artifactId = 'android-binding-classes'
+                artifactId = 'android-viewbinding-classes'
                 version = '1.0'
             }
         }
